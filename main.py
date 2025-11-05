@@ -5,7 +5,7 @@ from telegram.ext import Updater, CommandHandler, CallbackContext
 from keep_alive import keep_alive
 
 # ---------- CONFIG ----------
-BOT_TOKEN = "8232044234:AAG0Mm6_4N7PtK-mPsuNUh3sgeDp5A-OjE8"
+BOT_TOKEN = "8227694106:AAEfdOAz_vGebm7WvE7yTfS1l49RVv3twSY"
 OWNER_ID = 6847499628
 LOGS_CHANNEL = -1003089374759
 POW = "💠 <b>POWDERED BY:</b> @LuffyBots"
