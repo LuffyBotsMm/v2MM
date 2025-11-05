@@ -1,14 +1,14 @@
-import threading, time, requests
+from flask import Flask
+from threading import Thread
 
-def ping():
-    url = "https://finalmm.choreoapps.dev"   # your Choreo public URL
-    while True:
-        try:
-            requests.get(url, timeout=5)
-        except Exception:
-            pass
-        time.sleep(7200)  # every 2 hours
+app = Flask("keep_alive")
+
+@app.route('/')
+def home():
+    return "Bot is alive!"
+
+def run():
+    app.run(host="0.0.0.0", port=8080)
 
 def keep_alive():
-    t = threading.Thread(target=ping, daemon=True)
-    t.start()
+    Thread(target=run).start()
